@@ -1,6 +1,69 @@
-<meta http-equiv="content-type" charset="utf-8">
-
-<h1>Success!</h1>
-
-<img alt="Success!" src="green-build.png" width="500" height="500">
-
+<html>
+  <head>
+    <title>ようこそiYellへ</title>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-latest.min.js"
+    ></script>
+    "
+    <style type="text/css">
+      body {
+        background-color: lightskyblue;
+        background-image: url("https://madoguchi.iyell.jp/wp-content/themes/SUMIKARU/widget/images/widget_open.png");
+        background-repeat: no-repeat;
+        background-size: 150px;
+        background-position: left top;
+      }
+      h1 {
+        color: #ffffff;
+        margin-top: 100px;
+      }
+      input {
+        width: 50px;
+      }
+      button {
+        font-size: 32px;
+        border-radius: 4px;
+        background-color: #ffffff;
+      }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $("#doCalc").on("click", function () {
+          var num1 = $("#num1").val();
+          var num2 = $("#num2").val();
+          num1 = parseFloat(num1);
+          num2 = parseFloat(num2);
+          var answer = "";
+          var calctype = $("#calctype option:selected").val();
+          if (calctype == "+") {
+            answer = num1 + num2;
+          } else if (calctype == "-") {
+            answer = num1 - num2;
+          } else if (calctype == "*") {
+            answer = num1 * num2;
+          } else if ((calctype = "/")) {
+            answer = num1 / num2;
+          }
+          $("#answer").val(answer);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>iYell電卓</h1>
+    <span>数字１</span>
+    <input type="text" id="num1" /><br />
+    <span>数字２</span>
+    <input type="text" id="num2" /><br />
+    <span>計算方法</span>
+    <select id="calctype">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">✕</option>
+      <option value="/">÷</option>
+    </select>
+    <button id="doCalc">計算実行！</button><br />
+    <span>答え</span><input type="text" id="answer" />
+  </body>
+</html>
