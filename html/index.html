@@ -1,11 +1,12 @@
 <html>
   <head>
-    <title>ようこそiYell計算機へ</title>
+    <title>Welcome to the iYell Calculator.</title>
+
     <script
       type="text/javascript"
       src="https://code.jquery.com/jquery-latest.min.js"
     ></script>
-    "
+
     <style type="text/css">
       body {
         background-color: lightskyblue;
@@ -27,6 +28,7 @@
         background-color: #ffffff;
       }
     </style>
+
     <script>
       $(document).ready(function () {
         $("#doCalc").on("click", function () {
@@ -50,20 +52,21 @@
       });
     </script>
   </head>
+
   <body>
-    <h1>iYell電卓</h1>
-    <span>数字1</span>
-    <input type="text" id="num1" /><br />
-    <span>数字2</span>
-    <input type="text" id="num2" /><br />
-    <span>計算方法</span>
-    <select id="calctype">
-      <option value="+">+</option>
-      <option value="-">-</option>
-      <option value="*">✕</option>
-      <option value="/">÷</option>
-    </select>
-    <button id="doCalc">計算実行！</button><br />
-    <span>答え</span><input type="text" id="answer" />
+    <h1>Yell Calculator</h1>
+      <span>Please enter the number.</span>
+        <input type="text" id="num1" /><br />
+      <span>Please enter the number.</span>
+        <input type="text" id="num2" /><br />
+      <span>Choose your calculation method</span>
+        <select id="calctype">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">✕</option>
+          <option value="/">÷</option>
+        </select>
+      <button id="doCalc">Done</button><br />
+      <span>Answer</span><input type="text" id="answer" />
   </body>
 </html>
